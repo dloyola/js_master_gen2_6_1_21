@@ -54,3 +54,4 @@ console.log("Ejecicio 5: guardando en local storage ...");
 persona.guardarEnLocalStorage();
 console.log("Ejecicio 5: guardando en session storage ...");
 persona.guardarEnSessionStorage();
+
