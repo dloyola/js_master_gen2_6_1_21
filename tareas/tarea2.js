@@ -40,7 +40,7 @@ const trabajador = {
         hijos: null,
 }
 
-const personInfo = function({
+const informacionPersona = function({
     nombre, 
     empresa: {
         datos: {
@@ -60,8 +60,7 @@ const personInfo = function({
     return `El trabajador (${nombre}) trabaja en (${empresaNombre}) con cargo (${cargo}) y ${revisarGustos()}, (${revisarHijos()})`;
 }
 
-
-const workerInfo = function({
+const informacionTrabajador = function({
     nombre, 
     empresa: {
         ubicación: {
@@ -75,15 +74,11 @@ const workerInfo = function({
     hijos,}){
     const revisarClientes = function(){
         const thisClientes = clientes.map(function(cliente){
-            return `(${cliente})`
+            return `(${cliente})`;
         })
         return thisClientes.slice(0, thisClientes.length - 1).join(", ") + " y " + thisClientes[thisClientes.length - 1];
     };        
   
     return `El trabajador (${nombre}) va a su trabajo en (${comuna}), es (${cargo}), en el puesto (${puesto}), trabaja con ${revisarClientes()}`;
 }
-
-
-
-
 
