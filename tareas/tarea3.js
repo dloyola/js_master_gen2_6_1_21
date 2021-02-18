@@ -23,12 +23,12 @@ const findOrderByIdAndIngredient = (id, ingredient='pepinillos') => {
     return `No se encontró la orden con id ${id}`
 }
 
-const findOrderByDate = date => {
+const findOrderByDate = (date) => {
     const orders = sandwichOrders.filter(order => order.ordered === date)
     return `Se encontraron ${orders.length} ordenes para la fecha ${date}`
 }
 
-const filterByProteinAndIngredient = (protein = 'not burger', ingredient = 'cebolla caramelizada') =>  {
+const filterByProteinAndIngredient = (protein='not burger', ingredient='cebolla caramelizada') =>  {
     const orders =  sandwichOrders.filter(
         order => order.protein == protein && order.ingredients.includes(ingredient)
     )
